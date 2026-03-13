@@ -343,6 +343,34 @@
     .scard.art::before   { background: var(--rose); }
     .scard.locked::before { background: #aaa; }
 
+    .module-list {
+  display: flex; flex-direction: column; gap: .4rem;
+  margin-bottom: .9rem;
+}
+
+.module-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: .8rem; font-weight: 700;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 5px 8px; border-radius: 8px;
+  transition: background .15s;
+}
+.module-item:hover { background: rgba(255,198,45,0.18); color: var(--ink); }
+
+.dot-live {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #16a34a;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(22,163,74,0.2);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%,100% { box-shadow: 0 0 0 3px rgba(22,163,74,0.2); }
+  50%      { box-shadow: 0 0 0 5px rgba(22,163,74,0.08); }
+}
+
     .badge {
       display: inline-flex; align-items: center; gap: 4px;
       font-size: .68rem; font-weight: 800;
